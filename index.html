@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Javascript 01</title>
+    <script>
+        alert("olá galera!");
+
+        function trocarFrase () {
+            var fraseAtual = document.getElementById("frase");
+            fraseAtual.innerHTML = "Funcionou, a frase mudou!";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="frase"onmouseover="trocarFrase();">Olá Mundo!</h1>
+</body>
+</html>
