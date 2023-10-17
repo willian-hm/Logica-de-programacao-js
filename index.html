@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <title>Javascript 01</title>
-    <script>
-        alert("olá galera!");
+<html>
+    <head>
+        <title>Javascript 01</title>
+        <script>
+            alert("olá galera!")
 
-        function trocarFrase () {
-            var fraseAtual = document.getElementById("frase");
-            fraseAtual.innerHTML = "Funcionou, a frase mudou!";
-            fraseAtual.style.color = "red";
-            fraseAtual.style.fontSize = "25px";
-            fraseAtual.style.backgroundColor = "yellow";
-            document.body.style.backgroundColor = "blue";
-        }
-    </script>
-</head>
-<body>
-    <h1 id="frase"onmouseover="trocarFrase();">Olá Mundo!</h1>
-</body>
+            function mudarFrase() {
+                var elemento = document.getElementById("frase")
+                elemento.innerHTML = "Qualquer frase"
+                elemento.style.color = "red";
+                elemento.style.fontSize = "25px";
+                elemento.style.backgroundColor = "yellow";
+                document.body.style.backgroundColor = "blue";
+                elemento.innerHTML = "<img src=\'img/a.jpeg\' />"
+            }
+        </script>
+    </head>
+    <body>
+        <h1 ondblclick="mudarFrase()" id="frase">Olá Mundo!</h1>
+    </body>
 </html>
