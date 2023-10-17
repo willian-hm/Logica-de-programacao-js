@@ -7,5 +7,10 @@ function mudarFrase() {
     elemento.style.fontSize = "25px";
     elemento.style.backgroundColor = "yellow";
     document.body.style.backgroundColor = "blue";
-    elemento.innerHTML = "<img src=\'img/a.jpeg\' />"
+    elemento.innerHTML = "<img src=\'img/a.jpeg\' />";
+}
+
+function trocarClasse () {
+    var fraseAtual = document.getElementById("frase");
+    fraseAtual.className = "h1_2";
 }
