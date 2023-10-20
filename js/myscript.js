@@ -15,7 +15,7 @@ function trocarClasse () {
     fraseAtual.className = "h1_2";
 }
 
-function trocarTexto(umTexto) {
+function trocarTexto() {
     var elemento = document.getElementById("frase");
     var elementoNovo = document.getElementById("novaFrase").value;
     elemento.innerHTML = elementoNovo;
