@@ -14,3 +14,9 @@ function trocarClasse () {
     var fraseAtual = document.getElementById("frase");
     fraseAtual.className = "h1_2";
 }
+
+function trocarTexto(umTexto) {
+    var elemento = document.getElementById("frase");
+    var elementoNovo = document.getElementById("novaFrase").value;
+    elemento.innerHTML = elementoNovo;
+}
