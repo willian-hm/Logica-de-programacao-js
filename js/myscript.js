@@ -1,7 +1,7 @@
 
 function mudarFrase() {
-    var elemento = document.getElementById("frase")
-    elemento.innerHTML = "Qualquer frase"
+    var elemento = document.getElementById("frase");
+    elemento.innerHTML = "Qualquer frase";
     elemento.style.color = "red";
     elemento.style.fontSize = "25px";
     elemento.style.backgroundColor = "yellow";
@@ -29,7 +29,7 @@ function somar() {
 
     let resultadoDaSoma = valorN1 + valorN2;
 
-    let campoResultado = document.getElementById("resultado")
+    let campoResultado = document.getElementById("resultado");
     campoResultado.value = resultadoDaSoma;
 }
 
@@ -42,7 +42,7 @@ function subtrair() {
 
     let resultadoDaSoma = valorN1 - valorN2;
 
-    let campoResultado = document.getElementById("resultado")
+    let campoResultado = document.getElementById("resultado");
     campoResultado.value = resultadoDaSoma;
 }
 
@@ -55,7 +55,7 @@ function multiplicar() {
 
     let resultadoDaSoma = valorN1 * valorN2;
 
-    let campoResultado = document.getElementById("resultado")
+    let campoResultado = document.getElementById("resultado");
     campoResultado.value = resultadoDaSoma;
 }
 
@@ -68,6 +68,15 @@ function dividir() {
 
     let resultadoDaSoma = valorN1 / valorN2;
 
-    let campoResultado = document.getElementById("resultado")
+    let campoResultado = document.getElementById("resultado");
     campoResultado.value = resultadoDaSoma;
+}
+
+function validar() {
+    var nome = document.getElementById("nome").value;
+    if (nome === "") {
+        alert("não validado");
+    } else {
+        alert("validado");
+    }
 }
