@@ -74,8 +74,9 @@ function dividir() {
 
 function validar() {
     var nome = document.getElementById("nome").value;
-    if (nome === "") {
-        alert("não validado");
+    var senha = document.getElementById("senha").value;
+    if (nome === "" || senha === "") {
+        alert("não validado");  
     } else {
         alert("validado");
     }
