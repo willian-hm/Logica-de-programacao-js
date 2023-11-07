@@ -72,12 +72,9 @@ function dividir() {
     campoResultado.value = resultadoDaSoma;
 }
 
-function validar() {
-    var nome = document.getElementById("nome").value;
-    var senha = document.getElementById("senha").value;
-    if (nome === "" || senha === "") {
-        alert("não validado");  
-    } else {
-        alert("validado");
-    }
+function gebi(id) {
+    return document.getElementById(id)
 }
+
+
+

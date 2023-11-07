@@ -1,54 +1,89 @@
 <html>
-    <head><title>Titulo</title>
-        <script>
-            function trabalhandoNome() {
-                /* explicando variáveis */
-                var nome = prompt("Diga um nome", "Wanderson")
-                var sobrenome = prompt("Diga um sobrenome", "Rigo")
-                var nomeCompleto = nome + " " + sobrenome
-                var tamanhoDoNome = nomeCompleto.length
-                alert("[" + nomeCompleto + "]" +
-                    "\n" + " com tamanho = " + tamanhoDoNome)
 
-                var retorno = confirm("Seu nome é: " + nomeCompleto + "?")
-                if (retorno) {
-                    console.log("beleza!")
-                    document.write("confirmado o nome")
-                } else {
-                    console.log("Ixi, deu ruim!")
-                    document.write("errou o nome")
-                }
+<head>
+    <title>Titulo</title>
+    <script>
+        function trabalhandoNome() {
+            /* explicando variáveis */
+            var nome = prompt("Diga um nome", "Wanderson")
+            var sobrenome = prompt("Diga um sobrenome", "Rigo")
+            var nomeCompleto = nome + " " + sobrenome
+            var tamanhoDoNome = nomeCompleto.length
+            alert("[" + nomeCompleto + "]" +
+                "\n" + " com tamanho = " + tamanhoDoNome)
+
+            var retorno = confirm("Seu nome é: " + nomeCompleto + "?")
+            if (retorno) {
+                console.log("beleza!")
+                document.write("confirmado o nome")
+            } else {
+                console.log("Ixi, deu ruim!")
+                document.write("errou o nome")
+            }
+        }
+
+        function trabalhandoNúmeros() {
+            var num1 = prompt("diga um número", 10.3)
+            var num2 = 5
+            var total = parseFloat(num1) + num2
+            alert("total = " + total)
+        }
+
+        function validar() {
+            var email = gebi("idEmail").value;
+            var idade = gebi("idSenha").value;
+            var senha = gebi("idSenha").value;
+        }
+        function maiuscula() {
+            var email = gebi("idEmail").value;
+            gebi("idEmail").value = email.toUpperCase();
+        }
+
+        function validar() {
+            var email = gebi("idEmail").value;
+            var idade = gebi("idIdade").value;
+            var senha = gebi("idSenha").value;
+
+            if (email.length < 5) {
+                alert("email está errado!");
+                return;
             }
 
-            function trabalhandoNúmeros() {
-                var num1 = prompt("diga um número", 10.3)
-                var num2 = 5
-                var total = parseFloat(num1) + num2
-                alert("total = " + total)
+            if (idade < 15) {
+                alert("você é menor de idade!");
+                return;
             }
-           
-            function validar(){
-				var email = gebi("idEmail").value; 
-				var senha = gebi("idSenha").value;
-			}
-			function maiuscula(){
-				var email = gebi("idEmail").value;
-				gebi("idEmail").value = email.toUpperCase();
-			}
-        </script>        
-		<script type="text/javascript" src="js/myscript.js"></script>
-		</head>
-    <body>        
-        <center>
-            <h1>Validar</h1>
-			<form>
-				<fieldset align="center" style="width:270px"> 
-					<legend>Login:</legend>
-					Email: <input id="idEmail" type="text" onblur="maiuscula();"><br>
-					Senha: <input id="idSenha" type="password"><br> 
-					<input type="button" value="Enviar" onclick="validar();"> 
-				</fieldset> 
-			</form> 
-		</center> 
-    </body>
+
+            if (senha.length < 3) {
+                alert("senha deve ser maior que 3!");
+                return;
+            }
+
+            gebi("meuForm").submit();
+            alert("Sucesso!")
+
+            function maiuscula() {
+                var email = gebi("idEmail").value;
+                gebi("idEmail").value = email.toUpperCase();
+            }
+        }
+    </script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1>Validar</h1>
+        <form>
+            <fieldset align="center" style="width:270px">
+                <legend>Login:</legend>
+                Email: <input id="idEmail" type="text" onblur="maiuscula();"><br>
+                Idade: <input id="idIdade" type="number"><br>
+                Senha: <input id="idSenha" type="password"><br>
+                <input type="button" value="Enviar" onclick="validar();">
+            </fieldset>
+        </form>
+    </center>
+</body>
+
 </html>
