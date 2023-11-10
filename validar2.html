@@ -99,31 +99,36 @@
         var altura = document.getElementById('altura').value;
         var senha = document.getElementById('senha').value;
 
-        console.log('Nome: ' + nome);
-        console.log('E-mail: ' + email);
-        console.log('Idade: ' + idade);
-        console.log('Peso: ' + peso);
-        console.log('Altura: ' + altura);
-        console.log('Senha: ' + senha);
-
         if (nome !== "fulano") {
             document.getElementById('error').innerHTML = 'Nome incorreto. Por favor, insira "fulano".';
         } else if (email !== "nada@nada.com") {
             document.getElementById('error').innerHTML = 'Email incorreto. Por favor, insira "nada@nada.com".';
         } else if (idade < 10) {
             document.getElementById('error').innerHTML = 'Erro! A idade mínima é 10 anos';
-        } else if (peso < 40 || peso > 150) {
+        } else if ((peso < 40) || (peso > 150)) {
             document.getElementById('error').innerHTML = 'Erro! O peso mínimo é 40 e o máximo é 150';
         } else if (altura <= 1.40) {
             document.getElementById('error').innerHTML = 'Erro! Sua altura deve ser maior que 1,40';
-        } else if (senha !== "1234" && senha !== "4321") {
+        } else if ((senha !== "1234") && (senha !== "4321")) {
             document.getElementById('error').innerHTML = 'Opa! Sua senha deve ser "1234" ou "4321"';
         } else {
             document.getElementById('error').innerHTML = '';
-            document.getElementById('ok').innerHTML = 'Todos os campos estão corretos!';
+
+            // Constructing the URL with form data as query parameters
+            var url = 'http://jkorpela.fi/cgi-bin/echo.cgi' +
+                '?nome=' + encodeURIComponent(nome) +
+                '&email=' + encodeURIComponent(email) +
+                '&idade=' + encodeURIComponent(idade) +
+                '&peso=' + encodeURIComponent(peso) +
+                '&altura=' + encodeURIComponent(altura) +
+                '&senha=' + encodeURIComponent(senha);
+
+            // Redirecting to the new URL
+            window.location.href = url;
         }
     }
 </script>
+
 
 
 </body>
