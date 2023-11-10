@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        fieldset {
+            width: 1030px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="myForm">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" step="1" required>
+
+            <label for="peso">Peso:</label>
+            <input type="number" id="peso" name="peso" step="0.01" required>
+
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" name="altura" step="0.01" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="button" onclick="exibirValores(event)">Enviar</button>
+
+            <p id="error" style="color: red;"></p>
+            <p id="ok" style="color: green;"></p>
+        </fieldset>
+    </form>
+
+  
+<script>
+    function exibirValores(event) {
+        event.preventDefault();
+
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var idade = document.getElementById('idade').value;
+        var peso = document.getElementById('peso').value;
+        var altura = document.getElementById('altura').value;
+        var senha = document.getElementById('senha').value;
+
+        console.log('Nome: ' + nome);
+        console.log('E-mail: ' + email);
+        console.log('Idade: ' + idade);
+        console.log('Peso: ' + peso);
+        console.log('Altura: ' + altura);
+        console.log('Senha: ' + senha);
+
+        if (nome !== "fulano") {
+            document.getElementById('error').innerHTML = 'Nome incorreto. Por favor, insira "fulano".';
+        } else if (email !== "nada@nada.com") {
+            document.getElementById('error').innerHTML = 'Email incorreto. Por favor, insira "nada@nada.com".';
+        } else if (idade < 10) {
+            document.getElementById('error').innerHTML = 'Erro! A idade mínima é 10 anos';
+        } else if (peso < 40 || peso > 150) {
+            document.getElementById('error').innerHTML = 'Erro! O peso mínimo é 40 e o máximo é 150';
+        } else if (altura <= 1.40) {
+            document.getElementById('error').innerHTML = 'Erro! Sua altura deve ser maior que 1,40';
+        } else if (senha !== "1234" && senha !== "4321") {
+            document.getElementById('error').innerHTML = 'Opa! Sua senha deve ser "1234" ou "4321"';
+        } else {
+            document.getElementById('error').innerHTML = '';
+            document.getElementById('ok').innerHTML = 'Todos os campos estão corretos!';
+        }
+    }
+</script>
+
+
+</body>
+</html>
