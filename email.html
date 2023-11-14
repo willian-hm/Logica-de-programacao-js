@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email</title>
+</head>
+<body>
+    Está com dúvidas? <br>
+    <a href="mailto:willianmoreira0510@gmail.com?
+    &subject=Assundo do Email
+    &cc=copia@provedor.com.br
+    &bcc=copiaoculta@provedor.com.br
+    &body=Olá galera!">Enviar email</a> <br>
+    <a href="https://wa.me/554999999999?
+    text=mensagem%20de%20hoje">WhatsApp</a><br>
+<br>
+    <form id="idForm" action="https://app.headlessforms.cloud/api/v1/form-submission/UF7YAmmfN8" method="POST">
+        <label for="email">E-mail:</label><br>
+        <input placeholder="nada@nada.com" type="email" name="email" id="email" required><br>
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome" minlength="5" maxlength="12" pattern="[a-z]{5,12}" required><br><br>
+        <textarea placeholder="O texto do seu e-mail" name="texto" id="texto" pattern=".+@example\.com" cols="30" rows="10" required></textarea><br>
+        <input type="submit" value="Enviar">
+        
+    </form>
+</body>
+</html>
