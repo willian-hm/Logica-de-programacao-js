@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <style>
-        body {
+        #formulario {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -15,6 +15,7 @@
             align-items: center;
             min-height: 100vh;
         }
+
 
         fieldset {
             width: 1030px;
@@ -55,9 +56,15 @@
             background-color: #45a049;
         }
     </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+    <nav class="navbar">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Inicio</a>
+        </div>
+      </nav>
+<section id="formulario">
     <form id="myForm">
         <fieldset>
             <legend>Informações Pessoais</legend>
@@ -86,6 +93,8 @@
             <p id="ok" style="color: green;"></p>
         </fieldset>
     </form>
+</section>
+    
 
   
 <script>

@@ -1,3 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  .nav-item {
+    margin: 0 30px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #555;
+  }
+
+
 .h1_1 {
     background-color: crimson;
 }
