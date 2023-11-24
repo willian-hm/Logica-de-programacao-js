@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repete</title>
+    <script>
+        function contar() {
+          var contagem = 10;
+
+          while (contagem>=0) {
+            document.write(contagem);
+            contagem -= 1;
+          }
+
+          document.write( "<br>" + "tabuada do 5:" + " ");
+          contagem = 0;
+          while (contagem<=95) {
+            contagem += 5;
+            document.write (contagem + " ")
+          }
+          document.write("<br>")
+          var soma = 0;
+          contagem = 0
+
+          while (soma < 100) {
+            contagem++
+            soma += contagem
+            document.write(soma + " ")
+          }
+          document.write("<br>")
+          contagem = 0;
+
+          while (contagem < 25) {
+            if (contagem <25) {
+                document.write(contagem + " ")
+            }
+            contagem += 2;
+          }
+
+          document.write("<br>") 
+
+          contagem = 0;
+          var n = 0
+          while (contagem != 25) {
+            contagem = prompt('escolha um número de 0 a 100');
+            console.log(contagem);
+          }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="enviar" onclick="contar();">
+</body>
+</html>
